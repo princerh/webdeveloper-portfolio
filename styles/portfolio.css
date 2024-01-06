@@ -108,3 +108,17 @@ nav a {
     background: #FFF8F3;
     margin: 130px 0;
 }
+.about-info-container{
+    display: flex;
+    justify-content: space-around;
+}
+.about-info{
+    text-align: center;
+}
+main{
+    max-width: 1140px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;    */
+    margin: 0 auto;
+}
