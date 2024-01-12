@@ -21,7 +21,10 @@ body {
     font-size: 18px;
 
 }
-
+/* .btn-primary:hover{
+    background-color: red;
+    border: 3px solid black;
+} */
 .btn-primary {
     border-radius: 5px;
     background: #FD6E0A;
@@ -32,7 +35,17 @@ body {
     color: white;
     padding: 15px 35px;
 }
-
+#blinking-button { 
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    animation: blink 0.4s infinite; /* Apply continuous blinking animation */
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
 /* nav related style */
 nav {
     display: flex;
@@ -214,8 +227,67 @@ color: #757575;
 border-radius: 5px;
 background:#FFF;
 border: 0;
-width: 100%  
+width: 100%;
 }
 .social-links a{
     margin-right: 25px;
+}
+p {
+    text-align: justify;
+}
+.hide{
+    display: none;
+}
+
+@media screen and (max-width: 576px){
+    .header{
+        background-image: none;
+    }
+    .skills-container, .resume-container, footer, nav , .banner{
+        flex-direction: column;
+    }
+    .banner, .resume-container, #what-i-do-description, .about {
+        padding: 0 30px;
+    }
+    footer{
+        padding: 10px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+    .banner .profile-picture{
+        width: 100%;
+    }
+    .contact input[type = "text"], .contact input[type="email"],textarea{
+        
+        width: 80%;   
+        }
+    .about-info-container{
+        flex-wrap: wrap;
+    }
+    .btn-primary{
+        margin-bottom: 20px;
+    }
+    .skill .img-center{
+        text-align: center;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+    .skill h3{
+        text-align: center;
+    }
+        
+}
+@media screen and (min-width: 577px) and (max-width: 992px){
+    .skills-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        
+}
+
+.resume-item{
+    padding-left: 40px;
+}
 }
